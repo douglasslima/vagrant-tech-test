@@ -60,7 +60,7 @@ List minikube services nodeports and access using the ip 192.168.50.11:port inst
 ```
 minikube service list --namespace douglas-k8s-demo | grep np
 ```
-Login in the grafana dashboard and configure:
+Login in the grafana dashboard (192.168.50.11:grafana_port) and configure:
 ```
 datasource: Prometheus, with url http://prometheus-server:80 
 dashboard: import new dashboard and load from https://grafana.com/grafana/dashboards/6417 and select the prometheus datasource
