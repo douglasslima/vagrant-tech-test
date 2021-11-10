@@ -37,6 +37,10 @@ cd ~/projects/terraform-infra
 terraform init
 terraform apply -auto-approve
 ```
+After terraform apply, the application is accessible by address below:
+```
+mywebsite-app-192-168-50-11.nip.io
+```
 4 - Install Prometheus and Grafana via helm repositories
 Prometheus
 ```
