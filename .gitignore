@@ -2,4 +2,8 @@
 .vagrant
 # Ignore vscode temp folder
 .vscode
-
+# Ignore terraform temp files and folder
+.terraform
+*.tfstate
+*.tfstate.backup
+*.terraform.lock.hcl
