@@ -1,0 +1,53 @@
+---
+## Change with your personal information and local paths
+
+# Locale settings
+timezone: "America/Fortaleza"
+
+# Virtual Machine Settings
+vm_distro_version: "ubuntu/focal64" # Ubuntu 20.04 LTS
+vm_name: "douglas-vagrant"
+vm_hostname: "vagrant"
+vm_memory: 4096
+vm_cpu_count:  4
+
+# GitHub Settings
+git_username: "douglassilveiralima@gmail.com"
+git_email: "douglassilveiralima@gmail.com"
+
+# Vagrant Required Plugins
+vagrant_plugins:
+  - name: vagrant-vbguest
+    version: 0.30.0
+  - name: vagrant-timezone
+    version: 1.3.0
+  - name: vagrant-docker-compose
+    version: 1.5.1
+
+# Custom Applications Setup
+install_apps:
+  - name: docker
+    enable: true
+  - name: enable-ssh
+    enable: true
+  - name: base-apps
+    enable: true
+  - name: kubectl
+    enable: true
+  - name: kubectx
+    enable: true
+  - name: minikube
+    enable: true
+  - name: terraform
+    enable: true
+  - name: helm
+    enable: true
+
+# Vagrant Port Mapping
+vagrant_extra_ports:
+  - name: tcp_80
+    host_port: 80
+    guest_port: 80
+  - name: tcp_8080
+    host_port: 8080
+    guest_port: 8080

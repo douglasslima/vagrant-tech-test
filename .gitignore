@@ -1,0 +1,5 @@
+# Ignore Vagrant temp folder
+.vagrant
+# Ignore vscode temp folder
+.vscode
+

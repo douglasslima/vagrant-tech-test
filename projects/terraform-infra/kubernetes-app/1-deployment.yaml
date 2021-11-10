@@ -1,0 +1,24 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: douglas-k8s-demo
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mywebsite-app
+  namespace: douglas-k8s-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mywebsite-app
+  template:
+    metadata:
+      labels:
+        app: mywebsite-app
+    spec:
+      containers:
+        - name: mywebsite-app
+          image: douglasslima/my-website:1.0
